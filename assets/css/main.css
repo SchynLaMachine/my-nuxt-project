@@ -1,0 +1,33 @@
+@import "tailwindcss";
+:root {
+  --primary: #5e5da8; /* Couleur des boutons */
+  --secondary: #2f2e81; /* Couleur du header et du footer */
+}
+
+.bg-primary {
+  background-color: var(--primary);
+}
+
+.bg-secondary {
+  background-color: var(--secondary);
+}
+
+.text-primary {
+  color: var(--primary);
+}
+
+.text-secondary {
+  color: var(--secondary);
+}
+
+.btn-primary {
+  background-color: var(--primary);
+  color: white;
+  padding: 0.5rem 1rem;
+  border-radius: 0.375rem;
+  transition: background 0.3s ease-in-out;
+}
+
+.btn-primary:hover {
+  background-color: #4d4c90; /* Teinte plus foncée au survol */
+}
