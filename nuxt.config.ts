@@ -12,4 +12,10 @@ export default defineNuxtConfig({
       },
     },
   },
+  nitro: {
+    serveStatic: true, // Permet à Nitro de bien gérer les fichiers dans /public
+    externals: {
+      traceInclude: ["public/images/logo.png"], // Force l'inclusion de l'image dans le build
+    },
+  },
 });
