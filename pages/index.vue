@@ -1,7 +1,7 @@
 <template>
   <div class="bg-gray-100 text-gray-800">
     <div class="space-y-0">
-      <!-- Bannière 1 : Vêtements (décalée légèrement vers la gauche) -->
+      <!-- Bannière 1 : Vêtements -->
       <div
         class="relative h-[90vh] w-full flex flex-col items-end justify-center px-16"
       >
@@ -12,7 +12,6 @@
             class="h-full w-full object-cover brightness-75"
           />
         </div>
-        <!-- Texte de présentation -->
         <div class="relative z-10 text-white max-w-lg mr-50 text-center">
           <h1 class="text-4xl font-bold uppercase">Collection Vêtements</h1>
           <p class="mt-2 text-lg font-light">
@@ -20,7 +19,6 @@
             et décalé. Des designs uniques, des références cultes et un style
             inimitable.
           </p>
-          <!-- Bouton Découvrir (centré sous le texte) -->
           <NuxtLink
             to="/vetements"
             class="relative z-10 mt-6 flex justify-center"
@@ -30,7 +28,7 @@
         </div>
       </div>
 
-      <!-- 🚀 Bandeau défilant en continu -->
+      <!-- 🚀 Bandeau défilant -->
       <div class="relative bg-white overflow-hidden border-y border-gray-300">
         <div class="marquee flex items-center space-x-8 font-bold text-lg py-2">
           <span>🚚 Frais de port offerts à partir de 50€ d'achat !</span>
@@ -38,13 +36,10 @@
           <span>📦 Livraison rapide en 24/48h !</span>
           <span>🛒 Paiements sécurisés pour toutes vos commandes !</span>
           <span>🚚 Frais de port offerts à partir de 50€ d'achat !</span>
-          <span>🎉 Nouveaux produits chaque semaine, ne les manquez pas !</span>
-          <span>📦 Livraison rapide en 24/48h !</span>
-          <span>🛒 Paiements sécurisés pour toutes vos commandes !</span>
         </div>
       </div>
 
-      <!-- Bannière 2 : Accessoires (décalée légèrement vers la droite + texte centré) -->
+      <!-- Bannière 2 : Accessoires -->
       <div
         class="relative h-[90vh] w-full flex flex-col items-start justify-center px-16"
       >
@@ -55,7 +50,6 @@
             class="h-full w-full object-cover brightness-75"
           />
         </div>
-        <!-- Texte de présentation (centré + décalé légèrement à droite) -->
         <div class="relative z-10 text-white max-w-lg ml-50 text-center">
           <h1 class="text-4xl font-bold uppercase">Collection Accessoires</h1>
           <p class="mt-2 text-lg font-light">
@@ -63,7 +57,6 @@
             exclusifs. Des objets du quotidien transformés en références
             incontournables.
           </p>
-          <!-- Bouton Découvrir (centré sous le texte) -->
           <NuxtLink
             to="/accessoires"
             class="relative z-10 mt-6 flex justify-center"
@@ -74,20 +67,20 @@
       </div>
     </div>
 
-    <!-- Section 3 images carrées -->
+    <!-- Section des designs ajustés -->
     <div class="py-16 bg-gray-100">
       <h2 class="text-center text-2xl font-bold mb-8">
         Nos designs en avant-première
       </h2>
-      <div class="grid grid-cols-3 gap-6 px-8">
+      <div class="grid grid-cols-1 md:grid-cols-3 gap-4 px-8">
         <!-- Image 1 -->
         <div
-          class="relative group bg-gray-300 h-64 w-full rounded-lg overflow-hidden"
+          class="relative group bg-gray-200 h-80 w-full rounded-lg overflow-hidden flex items-center justify-center"
         >
           <img
-            src="/images/design1.jpg"
+            src="/images/design1.png"
             alt="Design 1"
-            class="h-full w-full object-cover transition duration-300 group-hover:brightness-50"
+            class="h-full w-full object-contain transition duration-300 group-hover:brightness-75"
           />
           <div
             class="absolute inset-0 flex items-center justify-center opacity-0 group-hover:opacity-100 transition duration-300 text-white text-center px-4"
@@ -99,12 +92,12 @@
         </div>
         <!-- Image 2 -->
         <div
-          class="relative group bg-gray-300 h-64 w-full rounded-lg overflow-hidden"
+          class="relative group bg-gray-200 h-80 w-full rounded-lg overflow-hidden flex items-center justify-center"
         >
           <img
-            src="/images/design2.jpg"
+            src="/images/design2.png"
             alt="Design 2"
-            class="h-full w-full object-cover transition duration-300 group-hover:brightness-50"
+            class="h-full w-full object-contain transition duration-300 group-hover:brightness-75"
           />
           <div
             class="absolute inset-0 flex items-center justify-center opacity-0 group-hover:opacity-100 transition duration-300 text-white text-center px-4"
@@ -116,12 +109,12 @@
         </div>
         <!-- Image 3 -->
         <div
-          class="relative group bg-gray-300 h-64 w-full rounded-lg overflow-hidden"
+          class="relative group bg-gray-200 h-80 w-full rounded-lg overflow-hidden flex items-center justify-center"
         >
           <img
-            src="/images/design3.jpg"
+            src="/images/design3.png"
             alt="Design 3"
-            class="h-full w-full object-cover transition duration-300 group-hover:brightness-50"
+            class="h-full w-full object-contain transition duration-300 group-hover:brightness-75"
           />
           <div
             class="absolute inset-0 flex items-center justify-center opacity-0 group-hover:opacity-100 transition duration-300 text-white text-center px-4"
@@ -137,7 +130,7 @@
 </template>
 
 <style>
-/* 🚀 Animation du bandeau défilant en continu */
+/* 🚀 Animation du bandeau défilant */
 @keyframes marquee {
   0% {
     transform: translateX(0);
