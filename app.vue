@@ -1,3 +1,8 @@
+<script setup>
+const config = useRuntimeConfig();
+const logoUrl = `${config.public.baseURL}/images/logo.png`;
+</script>
+
 <template>
   <div class="flex flex-col min-h-screen">
     <!-- Header -->
@@ -5,11 +10,7 @@
       <nav class="flex items-center justify-between px-8">
         <div class="flex-1 flex items-center">
           <NuxtLink to="/">
-            <img
-              src="@/assets/images/logo.png"
-              alt="Logo"
-              class="h-16 w-auto"
-            />
+            <img :src="logoUrl" alt="Logo" class="h-16 w-auto" />
           </NuxtLink>
         </div>
         <div class="flex-1 flex justify-center space-x-8">
@@ -105,64 +106,3 @@
     </footer>
   </div>
 </template>
-
-<style>
-/* 🚗 Conteneur de l'emoji voiture collé au footer */
-.footer-container {
-  position: relative;
-}
-
-/* Le conteneur est à l'intérieur du footer pour être bien positionné */
-.emoji-container {
-  position: absolute;
-  bottom: 98%; /* Ajustement fin pour descendre la voiture légèrement */
-  width: 100%;
-  overflow: hidden;
-  white-space: nowrap;
-  z-index: 10; /* Assure que l'emoji est visible */
-}
-
-/* Animation de l'emoji voiture */
-.emoji {
-  display: inline-block;
-  font-size: 2rem; /* Taille de l'emoji */
-  animation: rouler 6s linear infinite; /* Animation infinie */
-}
-
-/* Définition de l'animation : de droite à gauche */
-@keyframes rouler {
-  from {
-    transform: translateX(100vw);
-  }
-  to {
-    transform: translateX(-100%);
-  }
-}
-
-/* 🚀 Boutons circulaires des bannières */
-.banniere-btn {
-  display: inline-flex;
-  align-items: center;
-  justify-content: center;
-  width: 140px;
-  height: 50px;
-  background-color: white;
-  color: #2f2e81;
-  font-weight: 300;
-  font-size: 16px;
-  border-radius: 30px;
-  text-transform: uppercase;
-  letter-spacing: 1px;
-  transition: all 0.3s ease;
-  border: 2px solid transparent;
-  box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.2);
-}
-
-/* Effet au survol */
-.banniere-btn:hover {
-  background-color: #2f2e81;
-  color: white;
-  border: 2px solid white;
-  box-shadow: 0px 6px 10px rgba(0, 0, 0, 0.3);
-}
-</style>
