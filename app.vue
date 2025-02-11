@@ -5,7 +5,11 @@
       <nav class="flex items-center justify-between px-8">
         <div class="flex-1 flex items-center">
           <NuxtLink to="/">
-            <img src="/images/logo.png" alt="Logo" class="h-16 w-auto" />
+            <img
+              src="@/assets/images/logo.png"
+              alt="Logo"
+              class="h-16 w-auto"
+            />
           </NuxtLink>
         </div>
         <div class="flex-1 flex justify-center space-x-8">
